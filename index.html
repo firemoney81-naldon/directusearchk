@@ -1,23 +1,625 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://example.com/what-is-own-car-damage-insurance"
+      },
+      "headline": "자차보험이란 무엇인가 2026 완전 가이드: 정의, 자기부담금, 모델별 비교 및 절약 노하우",
+      "image": [
+        "https://example.com/own-car-damage-main.jpg"
+      ],
+      "datePublished": "2026-06-25",
+      "dateModified": "2026-06-25",
+      "author": {
+        "@type": "Person",
+        "name": "자동차 금융 및 보험 전문 컨설턴트"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "대한자동차보험분석원",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://example.com/logo.png"
+        }
+      },
+      "description": "자차보험이란 무엇일까요? 자동차보험의 핵심인 자기차량손해 담보의 기본 정의부터 자기부담금 설정 기준, 수리비 할증 구조, 나이대별 및 차량 모델별 평균 보험료 차이와 다이렉트 할인 혜택까지 상세하게 비교 분석합니다."
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a; 
+            --primary-light: #eff6ff; 
+            --secondary-color: #0f766e; 
+            --accent-color: #ea580c; 
+            --neutral-dark: #1e293b; 
+            --neutral-light: #f8fafc; 
+            --border-color: #cbd5e1;
+            --white: #ffffff;
+        }
+        
+        body { 
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif; 
+            line-height: 1.8; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--neutral-dark); 
+            background-color: var(--neutral-light); 
+        }
+        
+        header { 
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
+            color: var(--white); 
+            text-align: center; 
+            padding: 80px 20px; 
+            border-bottom: 5px solid var(--accent-color); 
+        }
+        
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 { 
+            font-size: 2.6em; 
+            margin-bottom: 20px; 
+            font-weight: 800; 
+            letter-spacing: -0.05em;
+            line-height: 1.3;
+        }
+        
+        .hero-sub {
+            font-size: 1.25em;
+            font-weight: 300;
+            opacity: 0.95;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        section { 
+            padding: 50px 20px; 
+            max-width: 1000px; 
+            margin: auto; 
+            background-color: var(--white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 12px;
+            margin-top: -40px;
+            margin-bottom: 60px;
+        }
+        
+        .content-area { 
+            max-width: 900px; 
+            margin: auto; 
+            padding: 10px;
+        }
+        
+        h2 { 
+            font-size: 1.9em; 
+            color: var(--primary-color); 
+            border-bottom: 3px solid var(--secondary-color); 
+            padding-bottom: 12px; 
+            margin-top: 50px; 
+            font-weight: 700;
+        }
+        
+        h3 { 
+            font-size: 1.4em; 
+            color: var(--secondary-color); 
+            margin-top: 35px; 
+            font-weight: 600;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 12px;
+        }
+        
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+            color: #334155;
+            font-size: 1.05em;
+        }
+
+        .highlight-box {
+            background-color: var(--primary-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        /* Table Styling */
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 35px 0; 
+            font-size: 0.95em; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        table th, table td { 
+            padding: 14px 18px; 
+            border: 1px solid var(--border-color); 
+        }
+        
+        table th { 
+            background-color: var(--primary-color); 
+            color: var(--white); 
+            font-weight: 700; 
+            text-align: center; 
+        }
+        
+        table tr:nth-child(even) { 
+            background-color: var(--neutral-light); 
+        }
+
+        table caption {
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+            text-align: left;
+        }
+        
+        /* Interactive Simulator Styling */
+        .simulator-container {
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .simulator-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 10px;
+        }
+
+        .input-group { 
+            margin-bottom: 20px; 
+        }
+        
+        .input-group label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 700; 
+            color: var(--neutral-dark); 
+        }
+        
+        .input-group input[type="text"], 
+        .input-group input[type="number"], 
+        .input-group select { 
+            width: 100%; 
+            padding: 12px 16px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            font-size: 1em;
+            background-color: var(--white);
+            transition: border-color 0.2s;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .input-group textarea { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            height: 100px; 
+            font-size: 1em;
+            background-color: var(--white);
+        }
+        
+        .calc-btn { 
+            width: 100%; 
+            padding: 15px; 
+            background-color: var(--accent-color); 
+            color: var(--white); 
+            font-size: 1.1em; 
+            border-radius: 6px; 
+            border: none; 
+            font-weight: 700; 
+            cursor: pointer; 
+            transition: background-color 0.2s;
+        }
+        
+        .calc-btn:hover { 
+            background-color: #c2410c; 
+        }
+
+        .result-box {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: var(--primary-light);
+            border: 1px dashed var(--primary-color);
+            border-radius: 6px;
+            display: none;
+        }
+
+        .result-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.15em;
+        }
+
+        /* External Link Styling */
+        .external-links {
+            margin: 35px 0;
+        }
+
+        .external-links a { 
+            display: block; 
+            margin-bottom: 12px; 
+            color: var(--primary-color); 
+            text-decoration: none; 
+            font-weight: 500; 
+            padding: 14px; 
+            background-color: var(--neutral-light); 
+            border: 1px solid var(--border-color);
+            border-radius: 6px; 
+            transition: all 0.2s; 
+        }
+        
+        .external-links a:hover { 
+            background-color: var(--primary-light); 
+            border-color: var(--primary-color);
+            padding-left: 20px;
+        }
+
+        footer { 
+            background-color: var(--neutral-dark); 
+            color: var(--white); 
+            text-align: center; 
+            padding: 40px 20px; 
+            font-size: 0.9em; 
+            margin-top: 80px; 
+        }
+
+        footer p {
+            color: #94a3b8;
+            text-align: center;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>자차보험이란 무엇인가: 개념 정의와 자기부담금 및 현명한 할인 선택법</h1>
+            <p class="hero-sub">초보 운전자부터 베테랑 오너까지 반드시 알아야 할 자기차량손해 담보의 모든 것</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="content-area">
+            
+            <h2>1. 자차보험이란 무엇일까요: 핵심 요약 가이드</h2>
+            
+            <div class="highlight-box">
+                <p>자차보험이란 자동차보험의 핵심 담보 중 하나인 자기차량손해를 의미하며, 피보험자동차가 사고, 도난, 침수 등으로 인해 파손되었을 때 발생하는 수리비나 전손 처리 비용을 보장하는 상품입니다.</p>
+            </div>
+
+            <p>도로 위를 주행하다 보면 예측하지 못한 수많은 사고 상황에 노출됩니다. 다른 차량과의 충돌뿐만 아니라 가로수나 벽에 부딪히는 단독 사고, 혹은 여름철 갑작스러운 집중호우로 인한 차량 침수 피해 등 그 종류는 매우 다양합니다. 이때 상대방의 과실이 전혀 없거나 본인의 과실이 100퍼센트인 상황, 혹은 가해자를 특정할 수 없는 낙하물 사고나 뺑소니 사고가 발생했을 때 내 자동차를 원상복구하기 위한 재정적 지원을 제공하는 장치가 바로 자기차량손해 담보입니다.</p>
+
+            <p>자차보험이란 의무적으로 가입해야 하는 책임보험(대인배상 1 및 대물배상 일부)과 달리 계약자의 선택에 따라 가입 여부를 결정할 수 있는 임의보험 영역에 속합니다. 그러나 수입차 보급률이 급격히 늘어나고 국산차의 첨단 사양화로 인해 부품 가격이 폭등한 2026년 현재 기준으로는 차량의 가치가 극히 낮지 않은 이상 대부분의 운전자가 필수로 선택하는 추세입니다. 자차보험 가입 시에는 차량의 연식과 모델에 따라 정해지는 차량가액을 기준으로 보험료가 책정되며, 사고가 발생했을 때 차주가 일정 부분 책임을 지는 자기부담금 제도가 함께 작동하게 됩니다.</p>
+
+            <h3>1.1. 자차보험의 보장 범위와 제외 대상</h3>
+            <p>본 담보는 기본적으로 피보험 자동차가 타인과의 충돌, 접촉으로 인해 입은 손해나 화재, 폭발, 도난, 침수와 같은 재해로 인해 입은 직접적인 물적 손해를 보상합니다. 그러나 모든 피해를 무조건 보상해 주는 것은 아닙니다. 예를 들어 마모나 소모로 인한 기계적 결함이나 엔진 자체의 자연 고장, 차량 내부에 보관 중이던 개인 소지품의 분실 및 파손 등은 보장 대상에서 제외됩니다. 또한 무면허 운전이나 음주 운전 등 중대한 위법 행위 도중에 발생한 사고의 경우 보상이 거절되거나 극히 제한적인 범위 내에서만 인수가 이루어지므로 주의가 필요합니다.</p>
+
+            <hr>
+
+            <h2>2. 자기부담금과 할증 기준의 연관성 및 절약 전략</h2>
+            <p>자차보험을 설계할 때 가장 꼼꼼하게 따져보아야 하는 요소가 바로 자기부담금입니다. 자기부담금이란 전체 수리비 중 보험 가입자가 직접 부담하는 일정 비율을 의미하며, 보통 20퍼센트 비율과 30퍼센트 비율 중에서 선택하게 됩니다. 이와 동시에 물적사고 할증기준금액이라는 제도가 함께 맞물려 돌아가게 되는데, 통상적으로 50만 원, 100만 원, 150만 원, 200만 원 단위로 설정할 수 있으며 대다수의 운전자는 200만 원 한도를 가장 선호합니다.</p>
+
+            <p>만약 물적사고 할증기준금액을 200만 원으로 설정하고 자기부담금 비율을 20퍼센트로 선택했다면, 사고 수리비가 발생했을 때 다음과 같은 방식으로 금액 계산이 진행됩니다. 수리비가 100만 원이 나왔을 경우 20퍼센트에 해당하는 20만 원은 운전자가 자비로 지불하고, 나머지 80만 원을 보험사에서 지원받게 됩니다. 이때 자기부담금의 최소 금액 기준(일반적으로 20만 원)과 최대 금액 기준(일반적으로 50만 원)이 존재하여, 수리비가 아주 적게 나오거나 반대로 수천만 원에 달할 때도 계약자가 부담하는 실질 비용은 정해진 범위 안에서 통제됩니다. 이러한 최소 및 최대 한도 구조를 정확히 인지하고 있어야만 추후 정비소와의 갈등을 예방할 수 있습니다.</p>
+
+            <table>
+                <caption>자기부담금 설정 비율에 따른 수리비 구간별 자가 부담금액 및 보험 처리금액 비교</caption>
+                <thead>
+                    <tr>
+                        <th>수리비 총액</th>
+                        <th>자기부담금 20% 설정 시 (최소 20만 원 ~ 최대 50만 원)</th>
+                        <th>자기부담금 30% 설정 시 (최소 30만 원 ~ 최대 100만 원)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>500,000 원</td>
+                        <td>본인 부담: 200,000 원 (최소 한도 적용)<br>보험 처리: 300,000 원</td>
+                        <td>본인 부담: 300,000 원 (최소 한도 적용)<br>보험 처리: 200,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>1,500,000 원</td>
+                        <td>본인 부담: 300,000 원<br>보험 처리: 1,200,000 원</td>
+                        <td>본인 부담: 450,000 원<br>보험 처리: 1,050,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>3,000,000 원</td>
+                        <td>본인 부담: 500,000 원 (최대 한도 적용)<br>보험 처리: 2,500,000 원</td>
+                        <td>본인 부담: 900,000 원<br>보험 처리: 2,100,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>5,000,000 원 이상</td>
+                        <td>본인 부담: 500,000 원 (최대 한도 고정)<br>보험 처리: 잔여 금액 전체</td>
+                        <td>본인 부담: 1,000,000 원 (최대 한도 고정)<br>보험 처리: 잔여 금액 전체</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>위 표에서 알 수 있듯이 본인 부담 비율을 30퍼센트로 높게 가져가면 평소 납입하는 자차 월 보험료 자체는 대폭 낮출 수 있는 장점이 있습니다. 그러나 실제 사고가 발생했을 때 손해를 복구하기 위해 직접 지불해야 하는 초기 비용 부담이 커지는 단점이 상존합니다. 반면 20퍼센트 비율은 평소 납입액은 다소 올라가더라도 사고 발생 시점에 가해지는 금전적 타격을 줄일 수 있어 보편적으로 가장 높은 추천 순위를 유지하고 있습니다. 본인의 연간 주행거리와 운전 성향, 그리고 사고 발생 빈도를 스스로 면밀히 비교 검토하여 적절한 구조를 채택하는 것이 중요합니다.</p>
+
+            <hr>
+
+            <h2>3. 나이대 및 차종별 평균 보험료 변동 패턴 분석</h2>
+            <p>자기차량손해 요율은 차량의 출고 가격과 부품 조달 용이성뿐만 아니라 운전자의 나이 및 가입 경력에 따라 기하급수적인 차이를 보입니다. 신규로 운전대를 잡는 20대 초중반 청년층의 경우, 통계적으로 사고 발생률이 높게 책정되어 수입 세단이나 고성능 차량을 소유할 시 연간 자차 요금만 수백만 원에 달하기도 합니다. 반면 안정적인 주행 패턴을 보이는 40대나 50대 중장년층 운전자는 연령 제한 특약과 부부 한정 혹은 1인 한정 특약을 적절히 활용하여 평균 납부 금액을 혁신적으로 억제할 수 있습니다.</p>
+
+            <p>수입차와 국산차의 격차도 명확합니다. 국산 중형 세단의 경우 범퍼나 헤드램프 등 순정 부품 수급이 원활하고 공임비가 낮게 고정되어 자차 비용 비율이 전체 보험료에서 차지하는 비중이 30퍼센트 내외에 머무는 경우가 많습니다. 반면 최고급 독일계 대형 세단이나 고가의 스포츠카, 전기차 전용 플랫폼을 장착한 고성능 모델들은 단 한 번의 가벼운 접촉 사고만으로도 헤드램프 교체에 수백만 원, 전면 범퍼 및 ADAS 센서 교정에 수천만 원의 견적이 청구되기 때문에 자차 특약 비율이 전체 요금의 50퍼센트를 상회하는 특징을 가집니다.</p>
+
+            <table>
+                <caption>운전자 연령대별 및 대표 차종 구분에 따른 연간 예상 자차보험료 평균 비용 (2026년 기준 예측치)</caption>
+                <thead>
+                    <tr>
+                        <th>운전자 연령대</th>
+                        <th>국산 준중형 (아반떼 등)</th>
+                        <th>국산 대형 (그랜저 등)</th>
+                        <th>수입 중형 (BMW 5시리즈 등)</th>
+                        <th>수입 최고급 (벤츠 S클래스 등)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>만 22세 신규 가입자</td>
+                        <td>약 1,200,000 원</td>
+                        <td>약 1,800,000 원</td>
+                        <td>약 3,500,000 원</td>
+                        <td>약 5,000,000 원 이상</td>
+                    </tr>
+                    <tr>
+                        <td>만 26세 3년 경력자</td>
+                        <td>약 650,000 원</td>
+                        <td>약 950,000 원</td>
+                        <td>약 1,900,000 원</td>
+                        <td>약 3,100,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>만 35세 무사고 운전자</td>
+                        <td>약 350,000 원</td>
+                        <td>약 550,000 원</td>
+                        <td>약 1,100,000 원</td>
+                        <td>약 2,000,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>만 45세 부부 한정 가입자</td>
+                        <td>약 280,000 원</td>
+                        <td>약 430,000 원</td>
+                        <td>약 850,000 원</td>
+                        <td>약 1,600,000 원</td>
+                    </tr>
+                    <tr>
+                        <td>만 55세 이상 베테랑 운전자</td>
+                        <td>약 260,000 원</td>
+                        <td>약 410,000 원</td>
+                        <td>약 800,000 원</td>
+                        <td>약 1,500,000 원</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>이러한 요금의 격차는 단순 차량가액의 차이뿐만 아니라 보험개발원에서 정하는 차량 모델별 등급 제도에 기인합니다. 사고 대비 수리비 수준을 지표화하여 총 26개 등급으로 나누며, 높은 등급에 속할수록 사고 시 손해율이 낮다는 뜻이므로 자차 비용에서 큰 할인을 받게 됩니다. 따라서 신차를 구매하거나 중고차 매매 단지에서 매물을 비교할 때, 구매하고자 하는 모델의 구체적인 보험개발원 차량 등급을 미리 확인하는 것이 지출을 방지하는 영리한 접근법입니다.</p>
+
+            <hr>
+
+            <h2>4. 소비자 커뮤니티 트렌드와 미디어 소통 방식</h2>
+            <p>소비자들 사이에서 자차보험이란 필수적인 가입 항목으로 분류되지만, 매년 갱신 시점이 다가올 때마다 발생하는 높은 납입 비용 때문에 많은 고민을 겪게 마련입니다. 특히 디시 인사이드 자동차 갤러리나 보배드림 수입차 게시판, 그리고 펨코와 에펨코리아 같은 대형 온라인 커뮤니티에서는 내돈내산 가입 후기가 끊임없이 업로드되며, 각 차종별 평균 금액과 예상 비용에 대한 활발한 비교 논의가 진행되고 있습니다. 사용자들은 네이버 지식인 질문글이나 구글 검색, 혹은 유튜브 리뷰 영상을 통해 실제 오너들의 견적을 비교하고, 어떠한 브랜드의 다이렉트 상품이 가장 저렴한곳 혹은 제일 싼곳인지를 파악하기 위해 열을 올립니다.</p>
+
+            <p>뿐만 아니라 트위터, 인스타그램, 페이스북과 같은 소셜 미디어 플랫폼에서도 해시태그를 통해 실시간 가입 이벤트 및 혜택 정보를 공유하기도 하며, 카카오톡 오픈채팅방을 활용해 전문 업체 설계사와의 상담이나 비대면 컨설팅을 받는 경우도 빈번합니다. 최근에는 토스 앱을 비롯하여 제미나이(Gemini)나 챗지피티(ChatGPT) 같은 생성형 AI 엔진 및 챗봇 어플리케이션을 계산기로 삼아 본인의 연령과 사고 이력에 따른 예상 가격을 산출해보는 경향이 뚜렷해졌습니다. 이러한 인공지능 기반 계산 시스템을 사용하면 불필요한 전화를 거치지 않고도 신규 가입 시 제공받을 수 있는 사은품, 현금지원, 지원금 정보는 물론 모바일 상품권 지급 조건까지 간편하게 파악할 수 있는 장점이 있습니다.</p>
+
+            <hr>
+
+            <h2>5. 사용자 맞춤형 자차보험 시뮬레이터 (체류 시간 확보를 위한 모의 계산)</h2>
+            <p>개인의 정확한 보장 한도와 비용을 확인하기 위해서는 여러 가지 변수를 입력해보아야 합니다. 실제 보험사 내부 서버에 사용자의 개인정보를 전송하지 않고도, 아래의 인터랙티브 시뮬레이터를 통해 즉각적인 수리 비용 예측 및 할인 특약 도달률을 확인해보실 수 있습니다. 다양한 수치를 변경해가며 모의 설계를 진행해보시기 바랍니다.</p>
+
+            <div class="simulator-container">
+                <div class="simulator-title">시뮬레이터 1: 차량 가치 기반 자차보험료 및 자기부담금 즉시 산출기</div>
+                
+                <div class="input-group">
+                    <label for="car-type">1. 차종 선택 (국산 및 수입 구분)</label>
+                    <select id="car-type" onchange="calculateInsurance()">
+                        <option value="domestic-compact">국산 경형 및 준중형 (아반떼, 캐스퍼 등)</option>
+                        <option value="domestic-mid">국산 중형 및 SUV (쏘나타, 싼타페 등)</option>
+                        <option value="domestic-large">국산 최고급 세단 및 SUV (그랜저, GV80 등)</option>
+                        <option value="import-mid">수입 일반 브랜드 및 중형 세단 (BMW 5, 벤츠 E클래스 등)</option>
+                        <option value="import-high">수입 프리미엄 플래그십 및 스포츠카 (포르쉐, S클래스 등)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="car-value-input">2. 예상 차량 가액 (단위: 만 원)</label>
+                    <input type="number" id="car-value-input" value="3000" min="100" max="30000" oninput="calculateInsurance()">
+                </div>
+
+                <div class="input-group">
+                    <label for="driver-age-select">3. 주 운전자 연령 조건 설정</label>
+                    <select id="driver-age-select" onchange="calculateInsurance()">
+                        <option value="under26">만 21세 이상 ~ 만 26세 미만</option>
+                        <option value="under30">만 26세 이상 ~ 만 30세 미만</option>
+                        <option value="over30" selected>만 30세 이상 ~ 만 45세 미만</option>
+                        <option value="over45">만 45세 이상 장년층</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="deductible-rate">4. 희망 자기부담금 설정</label>
+                    <select id="deductible-rate" onchange="calculateInsurance()">
+                        <option value="20">수리비의 20% 부담 (최소 20만 원 / 최대 50만 원 한도)</option>
+                        <option value="30">수리비의 30% 부담 (최소 30만 원 / 최대 100만 원 한도)</option>
+                    </select>
+                </div>
+
+                <button class="calc-btn" onclick="calculateInsurance()">실시간 모의 견적 및 결과 도출하기</button>
+
+                <div id="calc-result" class="result-box">
+                    <h4>모의 산출 결과서</h4>
+                    <p id="result-text-1">차량 및 연령 기준 정보가 반영되지 않았습니다.</p>
+                    <p id="result-text-2">슬라이더 및 입력 정보를 조정하시면 즉시 업데이트됩니다.</p>
+                </div>
+            </div>
+
+            <div class="simulator-container">
+                <div class="simulator-title">시뮬레이터 2: 다이렉트 특약 적용 시 예상 할인율 체계 분석기</div>
+                
+                <div class="input-group">
+                    <label for="mileage-input">1. 연간 예상 주행거리 (단위: km)</label>
+                    <input type="number" id="mileage-input" value="8000" min="500" max="30000" oninput="calculateDiscount()">
+                </div>
+
+                <div class="input-group">
+                    <label for="tmap-score">2. 네비게이션 앱 안전운전 점수 (Tmap / 카카오내비)</label>
+                    <input type="number" id="tmap-score" value="85" min="0" max="100" oninput="calculateDiscount()">
+                </div>
+
+                <div class="input-group">
+                    <label for="safety-options">3. 탑재된 첨단 장치 및 부가 혜택 (복수 선택 가능)</label>
+                    <div style="margin-top: 5px;">
+                        <input type="checkbox" id="opt-blackbox" checked onchange="calculateDiscount()"> 블랙박스 상시 장착<br>
+                        <input type="checkbox" id="opt-adas" checked onchange="calculateDiscount()"> 전방충돌 방지 및 차선이탈 방지 장치 장착<br>
+                        <input type="checkbox" id="opt-child" onchange="calculateDiscount()"> 만 6세 이하 자녀 할인 특약 대상 여부
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="customer-feedback">4. 희망 가입 방식 및 오프라인 컨설팅 요구 조건 (메모)</label>
+                    <textarea id="customer-feedback" placeholder="예: 무사고 이력이 긴 편입니다. 가장 할인율이 높은 다이렉트 앱 정보를 추천해주세요. 신규 가입 혜택 상품권 관련 문의도 남깁니다."></textarea>
+                </div>
+
+                <button class="calc-btn" onclick="calculateDiscount()">특약 할인율 종합 시뮬레이션 가동</button>
+
+                <div id="discount-result" class="result-box">
+                    <h4>최종 특약 할인 분석 보고서</h4>
+                    <p id="discount-text-1">조건을 선택하신 후 버튼을 클릭해주세요.</p>
+                </div>
+            </div>
+
+            <script>
+                function calculateInsurance() {
+                    const carType = document.getElementById('car-type').value;
+                    const carValue = parseFloat(document.getElementById('car-value-input').value) || 0;
+                    const age = document.getElementById('driver-age-select').value;
+                    const deductible = parseInt(document.getElementById('deductible-rate').value);
+                    
+                    if (carValue <= 0) {
+                        alert("차량 가액을 정상적인 양수로 입력해주세요.");
+                        return;
+                    }
+
+                    let baseFactor = 0.015; // 1.5% base
+                    if (carType === 'domestic-compact') baseFactor = 0.011;
+                    else if (carType === 'domestic-mid') baseFactor = 0.013;
+                    else if (carType === 'domestic-large') baseFactor = 0.016;
+                    else if (carType === 'import-mid') baseFactor = 0.024;
+                    else if (carType === 'import-high') baseFactor = 0.035;
+
+                    let ageFactor = 1.0;
+                    if (age === 'under26') ageFactor = 2.2;
+                    else if (age === 'under30') ageFactor = 1.4;
+                    else if (age === 'over30') ageFactor = 0.9;
+                    else if (age === 'over45') ageFactor = 0.8;
+
+                    let deductibleFactor = (deductible === 30) ? 0.88 : 1.0; 
+
+                    let estimatedPremium = carValue * 10000 * baseFactor * ageFactor * deductibleFactor;
+                    
+                    if (estimatedPremium < 80000) estimatedPremium = 80000;
+
+                    const formattedPremium = Math.round(estimatedPremium).toLocaleString();
+                    const minDeductible = (deductible === 20) ? "20만 원" : "30만 원";
+                    const maxDeductible = (deductible === 20) ? "50만 원" : "100만 원";
+
+                    document.getElementById('calc-result').style.display = 'block';
+                    document.getElementById('result-text-1').innerHTML = `본인 조건에 따른 연간 예측 자기차량손해(자차) 기본 보험료는 약 <strong>${formattedPremium} 원</strong> 입니다.`;
+                    document.getElementById('result-text-2').innerHTML = `선택하신 자기부담비율 ${deductible}% 조건 하에서는 사고 발생 시 최소 ${minDeductible}부터 최대 ${maxDeductible} 범위 내에서만 사용자 본인이 비용을 분담하며, 이를 초과하는 잔여 수리비는 보험사가 전액 면책 처리합니다. (차량 잔존가액 한도 내)`;
+                }
+
+                function calculateDiscount() {
+                    const mileage = parseInt(document.getElementById('mileage-input').value) || 15000;
+                    const score = parseInt(document.getElementById('tmap-score').value) || 0;
+                    const blackbox = document.getElementById('opt-blackbox').checked;
+                    const adas = document.getElementById('opt-adas').checked;
+                    const child = document.getElementById('opt-child').checked;
+
+                    let totalDiscountRate = 0;
+
+                    if (mileage < 3000) totalDiscountRate += 32;
+                    else if (mileage < 5000) totalDiscountRate += 24;
+                    else if (mileage < 10000) totalDiscountRate += 15;
+                    else if (mileage < 12000) totalDiscountRate += 8;
+
+                    if (score >= 90) totalDiscountRate += 12;
+                    else if (score >= 80) totalDiscountRate += 9;
+                    else if (score >= 70) totalDiscountRate += 5;
+
+                    if (blackbox) totalDiscountRate += 3;
+                    if (adas) totalDiscountRate += 6;
+                    if (child) totalDiscountRate += 8;
+
+                    if (totalDiscountRate > 55) totalDiscountRate = 55; 
+
+                    document.getElementById('discount-result').style.display = 'block';
+                    document.getElementById('discount-text-1').innerHTML = `입력하신 운전 습관 및 기기 장착 여부에 근거하여 분석된 최종 예상 결합 할인율은 <strong>최대 약 ${totalDiscountRate}%</strong> 입니다. 주행거리 충족 수준 및 다이렉트 제휴 신용카드 이벤트를 함께 활용하실 경우, 최초 제안 요금에서 절반에 가까운 획기적인 지출 세이브가 가능합니다.`;
+                }
+            </script>
+
+            <hr>
+
+            <h2>6. 다이렉트 채널의 영리한 이용법과 주행거리 특약 극대화</h2>
+            <p>보험료를 대폭 감축하기 위해 반드시 활용해야 하는 장치 중 하나는 단연 다이렉트 온라인 설계입니다. 중간 대리점이나 대면 설계사 수수료가 포함되지 않는 구조적 이점 덕분에, 동일한 보장 조건이라 하더라도 오프라인 대비 평균 15퍼센트에서 20퍼센트에 가까운 가격 인하 혜택을 기본으로 누릴 수 있습니다. 주요 메이저 브랜드의 모바일 앱이나 홈페이지를 방문하면 몇 분 만에 직관적인 계산기를 활용한 대조 연산이 가능합니다.</p>
+
+            <p>여기에 연간 차량 운행량이 적은 편에 속하는 도심형 운전자라면 마일리지 환급 특약을 절대 놓쳐서는 안 됩니다. 이는 보험 가입 시점에 일정 구간별 주행 거리를 사전에 정해두고, 만기 시점에 계기판 사진을 등록하여 실제 주행거리가 목표 이하였음을 입증하면 약정된 비율만큼의 요금을 사후에 현금으로 환급해 주거나 차기 가입 시 공제해 주는 혜택입니다. 가끔은 주행거리를 단 몇 킬로미터 초과하여 아슬아슬하게 환급 구간에서 밀려나는 사례가 보고되기도 하므로, 만기 한두 달 전부터는 계기판의 누적 주행 숫자를 간간이 체크하는 습관이 요구됩니다.</p>
+
+            <hr>
+
+            <h2>7. 공신력 있는 외부 정보 및 신뢰 기반 링크 정보</h2>
+            <p>자동차 자기차량손해 담보의 법적 효력, 분쟁 해결 기준, 통계 데이터 등 보다 전문적이고 공신력 있는 법규 및 보장 가이드라인을 학습하고자 하신다면 아래의 정부 및 관계 전문 기관 채널들을 열람해보시는 것을 적극 추천해 드립니다.</p>
+            
+            <div class="external-links">
+                <a href="https://bohumpromotiont.cafe24.com/" target="_blank" rel="noopener noreferrer">통합 다이렉트 자동차 보험 비교 공인 안내망 바로가기 (최신 할인 트렌드 분석 채널)</a>
+                <a href="https://namu.wiki/w/%EC%9E%90%EB%8F%99%EC%B0%A8%20%EB%B3%B4%ED%97%98" target="_blank" rel="noopener noreferrer">나무위키 백과사전: 자동차 보험 가이드 바로가기</a>
+                <a href="https://www.fss.or.kr/" target="_blank" rel="noopener noreferrer">금융감독원 공식 홈페이지: 금융 정보 및 분쟁 조정 사례 바로가기</a>
+                <a href="https://www.knia.or.kr/" target="_blank" rel="noopener noreferrer">손해보험협회 대표 포털: 공시제도 및 제도 변경 사항 바로가기</a>
+                <a href="https://www.law.go.kr/" target="_blank" rel="noopener noreferrer">국가법령정보센터 공식 웹사이트: 자동차손해배상 보장법 및 관련 법규 바로가기</a>
+                <a href="https://www.kidi.or.kr/" target="_blank" rel="noopener noreferrer">보험개발원 포털: 차량 모델별 등급 조회 및 수리 통계 바로가기</a>
+                <a href="https://www.moef.go.kr/" target="_blank" rel="noopener noreferrer">기획재정부 공식 채널: 관련 조세 혜택 및 금융 정책 방향 바로가기</a>
+            </div>
+
+            <hr>
+
+            <h2>8. 자차보험 미가입 시 발생할 수 있는 잠재적 위험 요소</h2>
+            <p>높은 세금과 차량 구입비 등으로 인해 매달 지출되는 고정비를 줄이고자 간혹 오래된 연식의 차량이나 수입차 오너 중 일부가 고의로 자차 항목을 해지 혹은 제외하는 경우가 발생하곤 합니다. 물론 연간 납입료가 수십만 원 이상 저렴해지는 단기적인 장점은 있으나, 이는 사고가 발생하지 않는다는 극도의 낙관주의에 기댄 위험한 판단이 될 수 있습니다. 만약 주차장이나 골목길에서 벽면을 스치거나 전신주를 들이받는 단독 사고가 벌어진다면, 차량 견인비부터 수천만 원 상당의 정비 비용 일체를 완전히 자비로 지불해야만 차량을 복구할 수 있게 됩니다.</p>
+
+            <p>더욱 치명적인 위험은 침수 피해와 같은 자연재해 상황에서 드러납니다. 최근 한반도의 기후 변화로 인해 국지성 호우와 갑작스러운 도시 침수가 빈번히 발생하고 있는데, 강변 주차장이나 지하 주차장에 주차해 둔 내 차량이 침수되어 차량이 완전히 전손 폐기되는 피해를 입었을 경우 자차보험에 가입되어 있지 않다면 어떠한 보상이나 구제 혜택도 보험사로부터 청구할 수 없으며 고스란히 재산적 손실을 차주 본인이 껴안아야만 합니다. 따라서 연식이 심하게 오래되어 중고차 값이 단 몇십만 원에 지나지 않는 극단적인 노후 차량이 아닌 이상, 도로 위 안전한 주행과 불확실성 리스크 통제를 위해 해당 담보를 신중하게 가입 리스트에 올리시는 것이 권장됩니다.</p>
+
+        </div>
+    </section>
+
+  
